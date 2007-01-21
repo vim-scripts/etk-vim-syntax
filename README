@@ -1,0 +1,9 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1770
+
+A C extension syntax file for Etk.
+
+Etk stand for Enlightenment Toolkit, it's another graphical toolkit written
+with the new EFL. It's under development and there is no stable release for
+the moment, so etk.vim file may not to be up to date.
+
+Etk version: 0.1.0.002

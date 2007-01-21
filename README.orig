@@ -1,0 +1,23 @@
+Etk stand for Enlightenment Toolkit, it's another graphical toolkit written
+with the new EFL. It's under development and there is no stable release for
+the moment, so etk.vim file may not to be up to date.
+
+Location:
+* http://www.vim.org/scripts/edit_script.php?script_id=1770
+
+Install:
+* You should run 'vim etk.vba' and ':so %'
+or
+* You should copy etk.vim in ~/.vim/after/syntax/c/
+or
+* You should copy etk.vim in ~/.vim/after/syntax/ and
+  add it in ~/.vim/after/syntax/c.vim (see c.vim.example)
+or
+* You should ':h runtimepath' ;)
+
+More info:
+* http://www.get-e.org/
+* http://enlightenment.sourceforge.net/
+
+Contact:
+* ajiproduction@gmail.com

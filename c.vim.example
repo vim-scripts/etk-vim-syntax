@@ -1,0 +1,5 @@
+if version < 600
+  so <sfile>:p:h/etk.vim
+else
+  runtime! syntax/etk.vim
+endif
