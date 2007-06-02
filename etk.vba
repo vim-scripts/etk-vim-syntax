@@ -1,14 +1,17 @@
 " Vimball Archiver by Charles E. Campbell, Jr., Ph.D.
 UseVimball
 finish
-syntax/c/etk.vim
-2008
-"" Vim syntax file
+after/syntax/c/etk.vim
+2020
+"" Vim Syntax File
 " Language: C etk
-" Maintainar: aji (ajiproduction at gmail dot com)
-" Last change: 2007-01-21
+" Maintainer: aji, ajiproduction at gmail dot com
+" URL: http://www.vim.org/scripts/script.php?script_id=1770
+" Last Change: 2007-06-02
 
-"etk_alignment.h
+" Etk.h
+
+" etk_alignment.h
 syn keyword etkConstant	ETK_ALIGNMENT_TYPE
 syn keyword etkMacro	ETK_ALIGNMENT
 syn keyword etkMacro	ETK_IS_ALIGNMENT
@@ -18,11 +21,11 @@ syn keyword etkFunction	etk_alignment_new
 syn keyword etkFunction	etk_alignment_set
 syn keyword etkFunction	etk_alignment_get
 
-"etk_argument.h
+" etk_argument.h
 syn keyword etkFunction	etk_argument_is_set
 syn keyword etkFunction	etk_argument_value_get
 
-"etk_bin.h
+" etk_bin.h
 syn keyword etkConstant	ETK_BIN_TYPE
 syn keyword etkMacro	ETK_BIN
 syn keyword etkMacro	ETK_IS_BIN
@@ -31,7 +34,7 @@ syn keyword etkFunction	etk_bin_type_get
 syn keyword etkFunction	etk_bin_child_set
 syn keyword etkFunction	etk_bin_child_get
 
-"etk_box.h
+" etk_box.h
 syn keyword etkConstant	ETK_BOX_TYPE
 syn keyword etkMacro	ETK_BOX
 syn keyword etkMacro	ETK_IS_BOX
@@ -42,15 +45,15 @@ syn keyword etkConstant	ETK_VBOX_TYPE
 syn keyword etkMacro	ETK_VBOX
 syn keyword etkMacro	ETK_IS_VBOX
 syn keyword etkType	Etk_Box_Group
-syn keyword etkType	Etk_Box_Group
 syn keyword etkConstant	ETK_BOX_START
 syn keyword etkConstant	ETK_BOX_END
-syn keyword etkType	Etk_Box_Fill_Policy
 syn keyword etkType	Etk_Box_Fill_Policy
 syn keyword etkConstant	ETK_BOX_NONE
 syn keyword etkConstant	ETK_BOX_EXPAND
 syn keyword etkConstant	ETK_BOX_FILL
 syn keyword etkConstant	ETK_BOX_EXPAND_FILL
+syn keyword etkConstant	ETK_BOX_SHRINK_OPPOSITE
+syn keyword etkType	Etk_Box_Cell
 syn keyword etkType	Etk_Box
 syn keyword etkType	Etk_HBox
 syn keyword etkType	Etk_VBox
@@ -73,11 +76,10 @@ syn keyword etkFunction	etk_box_spacing_get
 syn keyword etkFunction	etk_box_homogeneous_set
 syn keyword etkFunction	etk_box_homogeneous_get
 
-"etk_button.h
+" etk_button.h
 syn keyword etkConstant	ETK_BUTTON_TYPE
 syn keyword etkMacro	ETK_BUTTON
 syn keyword etkMacro	ETK_IS_BUTTON
-syn keyword etkType	Etk_Button_Style
 syn keyword etkType	Etk_Button_Style
 syn keyword etkConstant	ETK_BUTTON_ICON
 syn keyword etkConstant	ETK_BUTTON_TEXT
@@ -96,14 +98,14 @@ syn keyword etkFunction	etk_button_label_get
 syn keyword etkFunction	etk_button_image_set
 syn keyword etkFunction	etk_button_image_get
 syn keyword etkFunction	etk_button_set_from_stock
-syn keyword etkFunction	etk_button_alignment_set
-syn keyword etkFunction	etk_button_alignment_get
 syn keyword etkFunction	etk_button_style_set
 syn keyword etkFunction	etk_button_style_get
 syn keyword etkFunction	etk_button_stock_size_set
 syn keyword etkFunction	etk_button_stock_size_get
+syn keyword etkFunction	etk_button_alignment_set
+syn keyword etkFunction	etk_button_alignment_get
 
-"etk_cache.h
+" etk_cache.h
 syn keyword etkType	Etk_Cache
 syn keyword etkFunction	etk_cache_new
 syn keyword etkFunction	etk_cache_destroy
@@ -116,7 +118,7 @@ syn keyword etkFunction	etk_cache_add
 syn keyword etkFunction	etk_cache_remove
 syn keyword etkFunction	etk_cache_find
 
-"etk_canvas.h
+" etk_canvas.h
 syn keyword etkConstant	ETK_CANVAS_TYPE
 syn keyword etkMacro	ETK_CANVAS
 syn keyword etkMacro	ETK_IS_CANVAS
@@ -128,7 +130,7 @@ syn keyword etkFunction	etk_canvas_object_remove
 syn keyword etkFunction	etk_canvas_object_move
 syn keyword etkFunction	etk_canvas_object_geometry_get
 
-"etk_check_button.h
+" etk_check_button.h
 syn keyword etkConstant	ETK_CHECK_BUTTON_TYPE
 syn keyword etkMacro	ETK_CHECK_BUTTON
 syn keyword etkMacro	ETK_IS_CHECK_BUTTON
@@ -137,15 +139,10 @@ syn keyword etkFunction	etk_check_button_type_get
 syn keyword etkFunction	etk_check_button_new
 syn keyword etkFunction	etk_check_button_new_with_label
 
-"etk_clipboard.h
-syn keyword etkFunction	etk_clipboard_text_request
-syn keyword etkFunction	etk_clipboard_text_set
-
-"etk_colorpicker.h
+" etk_colorpicker.h
 syn keyword etkConstant	ETK_COLORPICKER_TYPE
 syn keyword etkMacro	ETK_COLORPICKER
 syn keyword etkMacro	ETK_IS_COLORPICKER
-syn keyword etkType	Etk_Colorpicker_Mode
 syn keyword etkType	Etk_Colorpicker_Mode
 syn keyword etkConstant	ETK_COLORPICKER_H
 syn keyword etkConstant	ETK_COLORPICKER_S
@@ -160,8 +157,10 @@ syn keyword etkFunction	etk_colorpicker_mode_set
 syn keyword etkFunction	etk_colorpicker_mode_get
 syn keyword etkFunction	etk_colorpicker_current_color_set
 syn keyword etkFunction	etk_colorpicker_current_color_get
+syn keyword etkFunction	etk_colorpicker_use_alpha_set
+syn keyword etkFunction	etk_colorpicker_use_alpha_get
 
-"etk_combobox.h
+" etk_combobox.h
 syn keyword etkConstant	ETK_COMBOBOX_TYPE
 syn keyword etkMacro	ETK_COMBOBOX
 syn keyword etkMacro	ETK_IS_COMBOBOX
@@ -169,10 +168,14 @@ syn keyword etkConstant	ETK_COMBOBOX_ITEM_TYPE
 syn keyword etkMacro	ETK_COMBOBOX_ITEM
 syn keyword etkMacro	ETK_IS_COMBOBOX_ITEM
 syn keyword etkType	Etk_Combobox_Column_Type
-syn keyword etkType	Etk_Combobox_Column_Type
 syn keyword etkConstant	ETK_COMBOBOX_LABEL
 syn keyword etkConstant	ETK_COMBOBOX_IMAGE
 syn keyword etkConstant	ETK_COMBOBOX_OTHER
+syn keyword etkType	Etk_Combobox_Fill_Policy
+syn keyword etkConstant	ETK_COMBOBOX_NONE
+syn keyword etkConstant	ETK_COMBOBOX_EXPAND
+syn keyword etkConstant	ETK_COMBOBOX_FILL
+syn keyword etkConstant	ETK_COMBOBOX_EXPAND_FILL
 syn keyword etkType	Etk_Combobox_Column
 syn keyword etkType	Etk_Combobox_Item
 syn keyword etkType	Etk_Combobox
@@ -180,30 +183,34 @@ syn keyword etkFunction	etk_combobox_type_get
 syn keyword etkFunction	etk_combobox_item_type_get
 syn keyword etkFunction	etk_combobox_new
 syn keyword etkFunction	etk_combobox_new_default
-syn keyword etkFunction	etk_combobox_item_height_set
-syn keyword etkFunction	etk_combobox_item_height_get
+syn keyword etkFunction	etk_combobox_items_height_set
+syn keyword etkFunction	etk_combobox_items_height_get
 syn keyword etkFunction	etk_combobox_column_add
 syn keyword etkFunction	etk_combobox_build
-syn keyword etkFunction	etk_combobox_active_item_set
-syn keyword etkFunction	etk_combobox_active_item_get
-syn keyword etkFunction	etk_combobox_active_item_nth_get
-syn keyword etkFunction	etk_combobox_nth_item_get
 syn keyword etkFunction	etk_combobox_item_prepend
-syn keyword etkFunction	etk_combobox_item_prepend_valist
 syn keyword etkFunction	etk_combobox_item_append
-syn keyword etkFunction	etk_combobox_item_append_valist
-syn keyword etkFunction	etk_combobox_item_prepend_relative
-syn keyword etkFunction	etk_combobox_item_prepend_relative_valist
-syn keyword etkFunction	etk_combobox_item_append_relative
-syn keyword etkFunction	etk_combobox_item_append_relative_valist
+syn keyword etkFunction	etk_combobox_item_insert
+syn keyword etkFunction	etk_combobox_item_insert_valist
 syn keyword etkFunction	etk_combobox_item_remove
 syn keyword etkFunction	etk_combobox_clear
+syn keyword etkFunction	etk_combobox_item_fields_set
+syn keyword etkFunction	etk_combobox_item_fields_set_valist
+syn keyword etkFunction	etk_combobox_item_fields_get
+syn keyword etkFunction	etk_combobox_item_fields_get_valist
 syn keyword etkFunction	etk_combobox_item_data_set
 syn keyword etkFunction	etk_combobox_item_data_set_full
 syn keyword etkFunction	etk_combobox_item_data_get
-syn keyword etkFunction	etk_combobox_item_activate
+syn keyword etkFunction	etk_combobox_active_item_set
+syn keyword etkFunction	etk_combobox_active_item_get
+syn keyword etkFunction	etk_combobox_active_item_num_get
+syn keyword etkFunction	etk_combobox_first_item_get
+syn keyword etkFunction	etk_combobox_last_item_get
+syn keyword etkFunction	etk_combobox_item_prev_get
+syn keyword etkFunction	etk_combobox_item_next_get
+syn keyword etkFunction	etk_combobox_nth_item_get
+syn keyword etkFunction	etk_combobox_item_combobox_get
 
-"etk_config.h
+" etk_config.h
 syn keyword etkFunction	etk_config_init
 syn keyword etkFunction	etk_config_shutdown
 syn keyword etkFunction	etk_config_load
@@ -215,7 +222,7 @@ syn keyword etkFunction	etk_config_font_set
 syn keyword etkFunction	etk_config_engine_get
 syn keyword etkFunction	etk_config_engine_set
 
-"etk_container.h
+" etk_container.h
 syn keyword etkConstant	ETK_CONTAINER_TYPE
 syn keyword etkMacro	ETK_CONTAINER
 syn keyword etkMacro	ETK_IS_CONTAINER
@@ -232,11 +239,10 @@ syn keyword etkFunction	etk_container_for_each
 syn keyword etkFunction	etk_container_for_each_data
 syn keyword etkFunction	etk_container_child_space_fill
 
-"etk_dialog.h
+" etk_dialog.h
 syn keyword etkConstant	ETK_DIALOG_TYPE
 syn keyword etkMacro	ETK_DIALOG
 syn keyword etkMacro	ETK_IS_DIALOG
-syn keyword etkType	Etk_Dialog_Response_ID
 syn keyword etkType	Etk_Dialog_Response_ID
 syn keyword etkConstant	ETK_RESPONSE_NONE
 syn keyword etkConstant	ETK_RESPONSE_REJECT
@@ -257,17 +263,24 @@ syn keyword etkFunction	etk_dialog_pack_widget_in_action_area
 syn keyword etkFunction	etk_dialog_pack_button_in_action_area
 syn keyword etkFunction	etk_dialog_button_add
 syn keyword etkFunction	etk_dialog_button_add_from_stock
+syn keyword etkFunction	etk_dialog_action_area_homogeneous_set
+syn keyword etkFunction	etk_dialog_action_area_homogeneous_get
+syn keyword etkFunction	etk_dialog_action_area_alignment_set
+syn keyword etkFunction	etk_dialog_action_area_alignment_get
+syn keyword etkFunction	etk_dialog_main_area_vbox_get
+syn keyword etkFunction	etk_dialog_action_area_hbox_get
+syn keyword etkFunction	etk_dialog_button_response_id_set
+syn keyword etkFunction	etk_dialog_button_response_id_get
 syn keyword etkFunction	etk_dialog_has_separator_set
 syn keyword etkFunction	etk_dialog_has_separator_get
 
-"etk_dnd.h
+" etk_dnd.h
 syn keyword etkConstant	ETK_SELECTION_TARGET_TARGETS
 syn keyword etkConstant	ETK_SELECTION_TARGET_TEXT
 syn keyword etkConstant	ETK_SELECTION_TARGET_COMPOUND_TEXT
 syn keyword etkConstant	ETK_SELECTION_TARGET_STRING
 syn keyword etkConstant	ETK_SELECTION_TARGET_UTF8_STRING
 syn keyword etkConstant	ETK_SELECTION_TARGET_FILENAME
-syn keyword etkType	Etk_Selection_Content
 syn keyword etkType	Etk_Selection_Content
 syn keyword etkConstant	ETK_SELECTION_CONTENT_NONE
 syn keyword etkConstant	ETK_SELECTION_CONTENT_TEXT
@@ -280,7 +293,7 @@ syn keyword etkType	_Etk_Selection_Data_Files
 syn keyword etkType	_Etk_Selection_Data_Text
 syn keyword etkType	_Etk_Selection_Data_Targets
 
-"etk_drag.h
+" etk_drag.h
 syn keyword etkConstant	ETK_DRAG_TYPE
 syn keyword etkMacro	ETK_DRAG
 syn keyword etkMacro	ETK_IS_DRAG
@@ -293,13 +306,15 @@ syn keyword etkFunction	etk_drag_begin
 syn keyword etkFunction	etk_drag_parent_widget_set
 syn keyword etkFunction	etk_drag_parent_widget_get
 
-"etk_editable.h
+" etk_editable.h
 syn keyword etkFunction	etk_editable_add
 syn keyword etkFunction	etk_editable_theme_set
 syn keyword etkFunction	etk_editable_align_set
 syn keyword etkFunction	etk_editable_align_get
 syn keyword etkFunction	etk_editable_password_mode_set
 syn keyword etkFunction	etk_editable_password_mode_get
+syn keyword etkFunction	etk_editable_disabled_set
+syn keyword etkFunction	etk_editable_disabled_get
 syn keyword etkFunction	etk_editable_text_set
 syn keyword etkFunction	etk_editable_text_get
 syn keyword etkFunction	etk_editable_text_range_get
@@ -327,7 +342,7 @@ syn keyword etkFunction	etk_editable_selection_hide
 syn keyword etkFunction	etk_editable_pos_get_from_coords
 syn keyword etkFunction	etk_editable_char_size_get
 
-"etk_embed.h
+" etk_embed.h
 syn keyword etkConstant	ETK_EMBED_TYPE
 syn keyword etkMacro	ETK_EMBED
 syn keyword etkMacro	ETK_IS_EMBED
@@ -335,8 +350,10 @@ syn keyword etkType	Etk_Embed
 syn keyword etkFunction	etk_embed_type_get
 syn keyword etkFunction	etk_embed_new
 syn keyword etkFunction	etk_embed_object_get
+syn keyword etkFunction	etk_embed_position_method_set
+syn keyword etkFunction	etk_embed_pointer_method_set
 
-"etk_engine.h
+" etk_engine.h
 syn keyword etkType	Etk_Engine
 syn keyword etkFunction	etk_engine_init
 syn keyword etkFunction	etk_engine_shutdown
@@ -380,6 +397,8 @@ syn keyword etkFunction	etk_engine_window_decorated_set
 syn keyword etkFunction	etk_engine_window_decorated_get
 syn keyword etkFunction	etk_engine_window_shaped_set
 syn keyword etkFunction	etk_engine_window_shaped_get
+syn keyword etkFunction	etk_engine_window_has_alpha_set
+syn keyword etkFunction	etk_engine_window_has_alpha_get
 syn keyword etkFunction	etk_engine_window_skip_taskbar_hint_set
 syn keyword etkFunction	etk_engine_window_skip_taskbar_hint_get
 syn keyword etkFunction	etk_engine_window_skip_pager_hint_set
@@ -398,11 +417,10 @@ syn keyword etkFunction	etk_engine_selection_clear
 syn keyword etkFunction	etk_engine_drag_constructor
 syn keyword etkFunction	etk_engine_drag_begin
 
-"etk_entry.h
+" etk_entry.h
 syn keyword etkConstant	ETK_ENTRY_TYPE
 syn keyword etkMacro	ETK_ENTRY
 syn keyword etkMacro	ETK_IS_ENTRY
-syn keyword etkType	Etk_Entry_Image_Position
 syn keyword etkType	Etk_Entry_Image_Position
 syn keyword etkConstant	ETK_ENTRY_IMAGE_PRIMARY
 syn keyword etkConstant	ETK_ENTRY_IMAGE_SECONDARY
@@ -414,13 +432,12 @@ syn keyword etkFunction	etk_entry_text_get
 syn keyword etkFunction	etk_entry_clear
 syn keyword etkFunction	etk_entry_image_set
 syn keyword etkFunction	etk_entry_image_get
-syn keyword etkFunction	etk_entry_image_highlight_set
 syn keyword etkFunction	etk_entry_clear_button_add
+syn keyword etkFunction	etk_entry_image_highlight_set
 syn keyword etkFunction	etk_entry_password_mode_set
 syn keyword etkFunction	etk_entry_password_mode_get
 
-"etk_event.h
-syn keyword etkType	Etk_Event_Type
+" etk_event.h
 syn keyword etkType	Etk_Event_Type
 syn keyword etkConstant	ETK_EVENT_MOUSE_MOVE
 syn keyword etkConstant	ETK_EVENT_MOUSE_DOWN
@@ -430,24 +447,20 @@ syn keyword etkConstant	ETK_EVENT_KEY_DOWN
 syn keyword etkConstant	ETK_EVENT_KEY_UP
 syn keyword etkConstant	ETK_EVENT_NUM_EVENTS
 syn keyword etkType	Etk_Modifiers
-syn keyword etkType	Etk_Modifiers
 syn keyword etkConstant	ETK_MODIFIER_NONE
 syn keyword etkConstant	ETK_MODIFIER_CTRL
 syn keyword etkConstant	ETK_MODIFIER_ALT
 syn keyword etkConstant	ETK_MODIFIER_SHIFT
 syn keyword etkConstant	ETK_MODIFIER_WIN
 syn keyword etkType	Etk_Locks
-syn keyword etkType	Etk_Locks
 syn keyword etkConstant	ETK_LOCK_NONE
 syn keyword etkConstant	ETK_LOCK_NUM
 syn keyword etkConstant	ETK_LOCK_CAPS
 syn keyword etkConstant	ETK_LOCK_SCROLL
 syn keyword etkType	Etk_Mouse_Flags
-syn keyword etkType	Etk_Mouse_Flags
 syn keyword etkConstant	ETK_MOUSE_NONE
 syn keyword etkConstant	ETK_MOUSE_DOUBLE_CLICK
 syn keyword etkConstant	ETK_MOUSE_TRIPLE_CLICK
-syn keyword etkType	Etk_Wheel_Direction
 syn keyword etkType	Etk_Wheel_Direction
 syn keyword etkConstant	ETK_WHEEL_VERTICAL
 syn keyword etkConstant	ETK_WHEEL_HORIZONTAL
@@ -474,7 +487,7 @@ syn keyword etkFunction	etk_event_global_callback_add
 syn keyword etkFunction	etk_event_global_callback_del
 syn keyword etkFunction	etk_event_mouse_position_get
 
-"etk_filechooser_widget.h
+" etk_filechooser_widget.h
 syn keyword etkConstant	ETK_FILECHOOSER_WIDGET_TYPE
 syn keyword etkMacro	ETK_FILECHOOSER_WIDGET
 syn keyword etkMacro	ETK_IS_FILECHOOSER_WIDGET
@@ -490,7 +503,7 @@ syn keyword etkFunction	etk_filechooser_widget_current_folder_get
 syn keyword etkFunction	etk_filechooser_widget_selected_file_get
 syn keyword etkFunction	etk_filechooser_widget_selected_files_get
 
-"etk_fixed.h
+" etk_fixed.h
 syn keyword etkConstant	ETK_FIXED_TYPE
 syn keyword etkMacro	ETK_FIXED
 syn keyword etkMacro	ETK_IS_FIXED
@@ -501,7 +514,7 @@ syn keyword etkFunction	etk_fixed_put
 syn keyword etkFunction	etk_fixed_move
 syn keyword etkFunction	etk_fixed_child_position_get
 
-"etk_frame.h
+" etk_frame.h
 syn keyword etkConstant	ETK_FRAME_TYPE
 syn keyword etkMacro	ETK_FRAME
 syn keyword etkMacro	ETK_IS_FRAME
@@ -511,9 +524,7 @@ syn keyword etkFunction	etk_frame_new
 syn keyword etkFunction	etk_frame_label_set
 syn keyword etkFunction	etk_frame_label_get
 
-"Etk.h
-
-"etk_iconbox.h
+" etk_iconbox.h
 syn keyword etkConstant	ETK_ICONBOX_TYPE
 syn keyword etkMacro	ETK_ICONBOX
 syn keyword etkMacro	ETK_IS_ICONBOX
@@ -552,11 +563,10 @@ syn keyword etkFunction	etk_iconbox_icon_unselect
 syn keyword etkFunction	etk_iconbox_is_selected
 syn keyword etkFunction	etk_iconbox_scrolled_view_get
 
-"etk_image.h
+" etk_image.h
 syn keyword etkConstant	ETK_IMAGE_TYPE
 syn keyword etkMacro	ETK_IMAGE
 syn keyword etkMacro	ETK_IS_IMAGE
-syn keyword etkType	Etk_Image_Source
 syn keyword etkType	Etk_Image_Source
 syn keyword etkConstant	ETK_IMAGE_FILE
 syn keyword etkConstant	ETK_IMAGE_EDJE
@@ -591,7 +601,7 @@ syn keyword etkFunction	etk_image_keep_aspect_get
 syn keyword etkFunction	etk_image_aspect_ratio_set
 syn keyword etkFunction	etk_image_aspect_ratio_get
 
-"etk_label.h
+" etk_label.h
 syn keyword etkConstant	ETK_LABEL_TYPE
 syn keyword etkMacro	ETK_LABEL
 syn keyword etkMacro	ETK_IS_LABEL
@@ -603,14 +613,14 @@ syn keyword etkFunction	etk_label_get
 syn keyword etkFunction	etk_label_alignment_set
 syn keyword etkFunction	etk_label_alignment_get
 
-"etk_main.h
+" etk_main.h
 syn keyword etkFunction	etk_init
 syn keyword etkFunction	etk_shutdown
 syn keyword etkFunction	etk_main
 syn keyword etkFunction	etk_main_quit
 syn keyword etkFunction	etk_main_iterate
 
-"etk_marshallers.h
+" etk_marshallers.h
 syn keyword etkFunction	etk_marshaller_VOID__VOID
 syn keyword etkFunction	etk_marshaller_VOID__INT
 syn keyword etkFunction	etk_marshaller_VOID__DOUBLE
@@ -621,15 +631,7 @@ syn keyword etkFunction	etk_marshaller_BOOL__VOID
 syn keyword etkFunction	etk_marshaller_BOOL__DOUBLE
 syn keyword etkFunction	etk_marshaller_BOOL__POINTER_POINTER
 
-"etk_menu_bar.h
-syn keyword etkConstant	ETK_MENU_BAR_TYPE
-syn keyword etkMacro	ETK_MENU_BAR
-syn keyword etkMacro	ETK_IS_MENU_BAR
-syn keyword etkType	Etk_Menu_Bar
-syn keyword etkFunction	etk_menu_bar_type_get
-syn keyword etkFunction	etk_menu_bar_new
-
-"etk_menu.h
+" etk_menu.h
 syn keyword etkConstant	ETK_MENU_TYPE
 syn keyword etkMacro	ETK_MENU
 syn keyword etkMacro	ETK_IS_MENU
@@ -643,7 +645,15 @@ syn keyword etkFunction	etk_menu_popup_at_xy
 syn keyword etkFunction	etk_menu_popup_at_xy_in_direction
 syn keyword etkFunction	etk_menu_popdown
 
-"etk_menu_item.h
+" etk_menu_bar.h
+syn keyword etkConstant	ETK_MENU_BAR_TYPE
+syn keyword etkMacro	ETK_MENU_BAR
+syn keyword etkMacro	ETK_IS_MENU_BAR
+syn keyword etkType	Etk_Menu_Bar
+syn keyword etkFunction	etk_menu_bar_type_get
+syn keyword etkFunction	etk_menu_bar_new
+
+" etk_menu_item.h
 syn keyword etkConstant	ETK_MENU_ITEM_TYPE
 syn keyword etkMacro	ETK_MENU_ITEM
 syn keyword etkMacro	ETK_IS_MENU_ITEM
@@ -674,7 +684,7 @@ syn keyword etkFunction	etk_menu_item_set_from_stock
 syn keyword etkFunction	etk_menu_item_submenu_set
 syn keyword etkFunction	etk_menu_item_submenu_get
 syn keyword etkFunction	etk_menu_item_select
-syn keyword etkFunction	etk_menu_item_deselect
+syn keyword etkFunction	etk_menu_item_unselect
 syn keyword etkFunction	etk_menu_item_activate
 syn keyword etkFunction	etk_menu_item_separator_type_get
 syn keyword etkFunction	etk_menu_item_separator_new
@@ -696,7 +706,7 @@ syn keyword etkFunction	etk_menu_item_radio_new_with_label_from_widget
 syn keyword etkFunction	etk_menu_item_radio_group_set
 syn keyword etkFunction	etk_menu_item_radio_group_get
 
-"etk_menu_shell.h
+" etk_menu_shell.h
 syn keyword etkConstant	ETK_MENU_SHELL_TYPE
 syn keyword etkMacro	ETK_MENU_SHELL
 syn keyword etkMacro	ETK_IS_MENU_SHELL
@@ -710,18 +720,16 @@ syn keyword etkFunction	etk_menu_shell_insert
 syn keyword etkFunction	etk_menu_shell_remove
 syn keyword etkFunction	etk_menu_shell_items_get
 
-"etk_message_dialog.h
+" etk_message_dialog.h
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_TYPE
 syn keyword etkMacro	ETK_MESSAGE_DIALOG
 syn keyword etkMacro	ETK_IS_MESSAGE_DIALOG
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_MAX_BUTTONS
 syn keyword etkType	Etk_Message_Dialog_Type
-syn keyword etkType	Etk_Message_Dialog_Type
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_INFO
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_WARNING
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_QUESTION
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_ERROR
-syn keyword etkType	Etk_Message_Dialog_Buttons
 syn keyword etkType	Etk_Message_Dialog_Buttons
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_NONE
 syn keyword etkConstant	ETK_MESSAGE_DIALOG_OK
@@ -739,7 +747,7 @@ syn keyword etkFunction	etk_message_dialog_message_type_get
 syn keyword etkFunction	etk_message_dialog_buttons_set
 syn keyword etkFunction	etk_message_dialog_buttons_get
 
-"etk_notebook.h
+" etk_notebook.h
 syn keyword etkConstant	ETK_NOTEBOOK_TYPE
 syn keyword etkMacro	ETK_NOTEBOOK
 syn keyword etkMacro	ETK_IS_NOTEBOOK
@@ -766,10 +774,8 @@ syn keyword etkFunction	etk_notebook_page_child_get
 syn keyword etkFunction	etk_notebook_tabs_visible_set
 syn keyword etkFunction	etk_notebook_tabs_visible_get
 
-"etk_object.h
-syn keyword etkFunction	ETK_OBJECT_CAST
-syn keyword etkFunction	ETK_OBJECT_CAST
-syn keyword etkFunction	ETK_OBJECT_CAST
+" etk_object.h
+syn keyword etkMacro	ETK_OBJECT_CAST
 syn keyword etkMacro	ETK_OBJECT_CHECK_TYPE
 syn keyword etkConstant	ETK_OBJECT_TYPE
 syn keyword etkMacro	ETK_OBJECT
@@ -804,7 +810,7 @@ syn keyword etkFunction	etk_object_notify
 syn keyword etkFunction	etk_object_notification_callback_add
 syn keyword etkFunction	etk_object_notification_callback_remove
 
-"etk_paned.h
+" etk_paned.h
 syn keyword etkConstant	ETK_PANED_TYPE
 syn keyword etkMacro	ETK_PANED
 syn keyword etkMacro	ETK_IS_PANED
@@ -819,25 +825,24 @@ syn keyword etkType	Etk_HPaned
 syn keyword etkType	Etk_VPaned
 syn keyword etkFunction	etk_paned_type_get
 syn keyword etkFunction	etk_hpaned_type_get
-syn keyword etkFunction	etk_hpaned_new
 syn keyword etkFunction	etk_vpaned_type_get
+syn keyword etkFunction	etk_hpaned_new
 syn keyword etkFunction	etk_vpaned_new
 syn keyword etkFunction	etk_paned_child1_set
 syn keyword etkFunction	etk_paned_child2_set
 syn keyword etkFunction	etk_paned_child1_get
 syn keyword etkFunction	etk_paned_child2_get
-syn keyword etkFunction	etk_paned_position_set
-syn keyword etkFunction	etk_paned_position_get
 syn keyword etkFunction	etk_paned_child1_expand_set
 syn keyword etkFunction	etk_paned_child2_expand_set
 syn keyword etkFunction	etk_paned_child1_expand_get
 syn keyword etkFunction	etk_paned_child2_expand_get
+syn keyword etkFunction	etk_paned_position_set
+syn keyword etkFunction	etk_paned_position_get
 
-"etk_popup_window.h
+" etk_popup_window.h
 syn keyword etkConstant	ETK_POPUP_WINDOW_TYPE
 syn keyword etkMacro	ETK_POPUP_WINDOW
 syn keyword etkMacro	ETK_IS_POPUP_WINDOW
-syn keyword etkType	Etk_Popup_Direction
 syn keyword etkType	Etk_Popup_Direction
 syn keyword etkConstant	ETK_POPUP_BELOW_RIGHT
 syn keyword etkConstant	ETK_POPUP_BELOW_LEFT
@@ -857,11 +862,10 @@ syn keyword etkFunction	etk_popup_window_popdown
 syn keyword etkFunction	etk_popup_window_popdown_all
 syn keyword etkFunction	etk_popup_window_is_popped_up
 
-"etk_progress_bar.h
+" etk_progress_bar.h
 syn keyword etkConstant	ETK_PROGRESS_BAR_TYPE
 syn keyword etkMacro	ETK_PROGRESS_BAR
 syn keyword etkMacro	ETK_IS_PROGRESS_BAR
-syn keyword etkType	Etk_Progress_Bar_Direction
 syn keyword etkType	Etk_Progress_Bar_Direction
 syn keyword etkConstant	ETK_PROGRESS_BAR_LEFT_TO_RIGHT
 syn keyword etkConstant	ETK_PROGRESS_BAR_RIGHT_TO_LEFT
@@ -879,8 +883,7 @@ syn keyword etkFunction	etk_progress_bar_pulse_step_get
 syn keyword etkFunction	etk_progress_bar_direction_set
 syn keyword etkFunction	etk_progress_bar_direction_get
 
-"etk_property.h
-syn keyword etkType	Etk_Property_Type
+" etk_property.h
 syn keyword etkType	Etk_Property_Type
 syn keyword etkConstant	ETK_PROPERTY_NONE
 syn keyword etkConstant	ETK_PROPERTY_INT
@@ -893,7 +896,6 @@ syn keyword etkConstant	ETK_PROPERTY_LONG
 syn keyword etkConstant	ETK_PROPERTY_POINTER
 syn keyword etkConstant	ETK_PROPERTY_STRING
 syn keyword etkConstant	ETK_PROPERTY_OTHER
-syn keyword etkType	Etk_Property_Flags
 syn keyword etkType	Etk_Property_Flags
 syn keyword etkConstant	ETK_PROPERTY_NO_ACCESS
 syn keyword etkConstant	ETK_PROPERTY_READABLE
@@ -942,7 +944,7 @@ syn keyword etkFunction	etk_property_value_long_get
 syn keyword etkFunction	etk_property_value_pointer_get
 syn keyword etkFunction	etk_property_value_string_get
 
-"etk_radio_button.h
+" etk_radio_button.h
 syn keyword etkConstant	ETK_RADIO_BUTTON_TYPE
 syn keyword etkMacro	ETK_RADIO_BUTTON
 syn keyword etkMacro	ETK_IS_RADIO_BUTTON
@@ -955,7 +957,7 @@ syn keyword etkFunction	etk_radio_button_new_with_label_from_widget
 syn keyword etkFunction	etk_radio_button_group_set
 syn keyword etkFunction	etk_radio_button_group_get
 
-"etk_range.h
+" etk_range.h
 syn keyword etkConstant	ETK_RANGE_TYPE
 syn keyword etkMacro	ETK_RANGE
 syn keyword etkMacro	ETK_IS_RANGE
@@ -970,7 +972,7 @@ syn keyword etkFunction	etk_range_increments_get
 syn keyword etkFunction	etk_range_page_size_set
 syn keyword etkFunction	etk_range_page_size_get
 
-"etk_scrollbar.h
+" etk_scrollbar.h
 syn keyword etkConstant	ETK_SCROLLBAR_TYPE
 syn keyword etkMacro	ETK_SCROLLBAR
 syn keyword etkMacro	ETK_IS_SCROLLBAR
@@ -985,15 +987,14 @@ syn keyword etkType	Etk_HScrollbar
 syn keyword etkType	Etk_VScrollbar
 syn keyword etkFunction	etk_scrollbar_type_get
 syn keyword etkFunction	etk_hscrollbar_type_get
-syn keyword etkFunction	etk_hscrollbar_new
 syn keyword etkFunction	etk_vscrollbar_type_get
+syn keyword etkFunction	etk_hscrollbar_new
 syn keyword etkFunction	etk_vscrollbar_new
 
-"etk_scrolled_view.h
+" etk_scrolled_view.h
 syn keyword etkConstant	ETK_SCROLLED_VIEW_TYPE
 syn keyword etkMacro	ETK_SCROLLED_VIEW
 syn keyword etkMacro	ETK_IS_SCROLLED_VIEW
-syn keyword etkType	Etk_Scrolled_View_Policy
 syn keyword etkType	Etk_Scrolled_View_Policy
 syn keyword etkConstant	ETK_POLICY_AUTO
 syn keyword etkConstant	ETK_POLICY_SHOW
@@ -1007,13 +1008,11 @@ syn keyword etkFunction	etk_scrolled_view_add_with_viewport
 syn keyword etkFunction	etk_scrolled_view_policy_set
 syn keyword etkFunction	etk_scrolled_view_policy_get
 
-"etk_selection.h
-syn keyword etkType	Etk_Selection_Type
+" etk_selection.h
 syn keyword etkType	Etk_Selection_Type
 syn keyword etkConstant	ETK_SELECTION_PRIMARY
 syn keyword etkConstant	ETK_SELECTION_SECONDARY
 syn keyword etkConstant	ETK_SELECTION_CLIPBOARD
-syn keyword etkType	Etk_Selection_Content_Type
 syn keyword etkType	Etk_Selection_Content_Type
 syn keyword etkConstant	ETK_SELECTION_TEXT
 syn keyword etkType	Etk_Selection_Event
@@ -1021,7 +1020,7 @@ syn keyword etkFunction	etk_selection_text_set
 syn keyword etkFunction	etk_selection_text_request
 syn keyword etkFunction	etk_selection_clear
 
-"etk_separator.h
+" etk_separator.h
 syn keyword etkConstant	ETK_SEPARATOR_TYPE
 syn keyword etkMacro	ETK_SEPARATOR
 syn keyword etkMacro	ETK_IS_SEPARATOR
@@ -1040,16 +1039,14 @@ syn keyword etkFunction	etk_vseparator_type_get
 syn keyword etkFunction	etk_hseparator_new
 syn keyword etkFunction	etk_vseparator_new
 
-"etk_shadow.h
+" etk_shadow.h
 syn keyword etkConstant	ETK_SHADOW_TYPE
 syn keyword etkMacro	ETK_SHADOW
 syn keyword etkMacro	ETK_IS_SHADOW
 syn keyword etkType	Etk_Shadow_Type
-syn keyword etkType	Etk_Shadow_Type
 syn keyword etkConstant	ETK_SHADOW_NONE
 syn keyword etkConstant	ETK_SHADOW_INSIDE
 syn keyword etkConstant	ETK_SHADOW_OUTSIDE
-syn keyword etkType	Etk_Shadow_Edges
 syn keyword etkType	Etk_Shadow_Edges
 syn keyword etkConstant	ETK_SHADOW_NO_EDGE
 syn keyword etkConstant	ETK_SHADOW_LEFT
@@ -1071,18 +1068,7 @@ syn keyword etkFunction	etk_shadow_border_get
 syn keyword etkFunction	etk_shadow_border_color_set
 syn keyword etkFunction	etk_shadow_border_color_get
 
-"etk_signal_callback.h
-syn keyword etkMacro	ETK_CALLBACK
-syn keyword etkType	Etk_Signal_Callback
-syn keyword etkFunction	etk_signal_callback_new
-syn keyword etkFunction	etk_signal_callback_del
-syn keyword etkFunction	etk_signal_callback_call
-syn keyword etkFunction	etk_signal_callback_call_valist
-syn keyword etkFunction	etk_signal_callback_block
-syn keyword etkFunction	etk_signal_callback_unblock
-syn keyword etkFunction	etk_signal_callback_is_blocked
-
-"etk_signal.h
+" etk_signal.h
 syn keyword etkMacro	ETK_MEMBER_OFFSET
 syn keyword etkType	Etk_Signal
 syn keyword etkFunction	etk_signal_shutdown
@@ -1096,6 +1082,7 @@ syn keyword etkFunction	etk_signal_connect_after
 syn keyword etkFunction	etk_signal_connect_swapped
 syn keyword etkFunction	etk_signal_connect_full
 syn keyword etkFunction	etk_signal_disconnect
+syn keyword etkFunction	etk_signal_disconnect_all
 syn keyword etkFunction	etk_signal_block
 syn keyword etkFunction	etk_signal_unblock
 syn keyword etkFunction	etk_signal_emit
@@ -1103,7 +1090,18 @@ syn keyword etkFunction	etk_signal_emit_by_name
 syn keyword etkFunction	etk_signal_emit_valist
 syn keyword etkFunction	etk_signal_stop
 
-"etk_slider.h
+" etk_signal_callback.h
+syn keyword etkMacro	ETK_CALLBACK
+syn keyword etkType	Etk_Signal_Callback
+syn keyword etkFunction	etk_signal_callback_new
+syn keyword etkFunction	etk_signal_callback_del
+syn keyword etkFunction	etk_signal_callback_call
+syn keyword etkFunction	etk_signal_callback_call_valist
+syn keyword etkFunction	etk_signal_callback_block
+syn keyword etkFunction	etk_signal_callback_unblock
+syn keyword etkFunction	etk_signal_callback_is_blocked
+
+" etk_slider.h
 syn keyword etkConstant	ETK_SLIDER_TYPE
 syn keyword etkMacro	ETK_SLIDER
 syn keyword etkMacro	ETK_IS_SLIDER
@@ -1113,16 +1111,26 @@ syn keyword etkMacro	ETK_IS_HSLIDER
 syn keyword etkConstant	ETK_VSLIDER_TYPE
 syn keyword etkMacro	ETK_VSLIDER
 syn keyword etkMacro	ETK_IS_VSLIDER
-syn keyword etkType	_Etk_Slider
-syn keyword etkType	_Etk_HSlider
-syn keyword etkType	_Etk_VSlider
+syn keyword etkType	Etk_Slider_Update_Policy
+syn keyword etkConstant	ETK_SLIDER_CONTINUOUS
+syn keyword etkConstant	ETK_SLIDER_DISCONTINUOUS
+syn keyword etkConstant	ETK_SLIDER_DELAYED
+syn keyword etkType	Etk_Slider
+syn keyword etkType	Etk_HSlider
+syn keyword etkType	Etk_VSlider
 syn keyword etkFunction	etk_slider_type_get
 syn keyword etkFunction	etk_vslider_type_get
 syn keyword etkFunction	etk_hslider_type_get
 syn keyword etkFunction	etk_hslider_new
 syn keyword etkFunction	etk_vslider_new
+syn keyword etkFunction	etk_slider_label_set
+syn keyword etkFunction	etk_slider_label_get
+syn keyword etkFunction	etk_slider_inverted_set
+syn keyword etkFunction	etk_slider_inverted_get
+syn keyword etkFunction	etk_slider_update_policy_set
+syn keyword etkFunction	etk_slider_update_policy_get
 
-"etk_spinner.h
+" etk_spinner.h
 syn keyword etkConstant	ETK_SPINNER_TYPE
 syn keyword etkMacro	ETK_SPINNER
 syn keyword etkMacro	ETK_IS_SPINNER
@@ -1136,7 +1144,7 @@ syn keyword etkFunction	etk_spinner_snap_to_ticks_get
 syn keyword etkFunction	etk_spinner_wrap_set
 syn keyword etkFunction	etk_spinner_wrap_get
 
-"etk_statusbar.h
+" etk_statusbar.h
 syn keyword etkConstant	ETK_STATUSBAR_TYPE
 syn keyword etkMacro	ETK_STATUSBAR
 syn keyword etkMacro	ETK_IS_STATUSBAR
@@ -1151,15 +1159,14 @@ syn keyword etkFunction	etk_statusbar_message_get
 syn keyword etkFunction	etk_statusbar_has_resize_grip_set
 syn keyword etkFunction	etk_statusbar_has_resize_grip_get
 
-"etk_stock.h
-syn keyword etkType	_Etk_Stock_Size
+" etk_stock.h
 syn keyword etkType	Etk_Stock_Size
 syn keyword etkType	_Etk_Stock_Size
 syn keyword etkConstant	ETK_STOCK_SMALL
 syn keyword etkConstant	ETK_STOCK_MEDIUM
 syn keyword etkConstant	ETK_STOCK_BIG
-syn keyword etkType	_Etk_Stock_Id
 syn keyword etkType	Etk_Stock_Id
+syn keyword etkType	_Etk_Stock_Id
 syn keyword etkConstant	ETK_STOCK_NO_STOCK
 syn keyword etkConstant	ETK_STOCK_ADDRESS_BOOK_NEW
 syn keyword etkConstant	ETK_STOCK_APPOINTMENT_NEW
@@ -1379,7 +1386,7 @@ syn keyword etkConstant	ETK_NUM_STOCK_IDS
 syn keyword etkFunction	etk_stock_key_get
 syn keyword etkFunction	etk_stock_label_get
 
-"etk_string.h
+" etk_string.h
 syn keyword etkConstant	ETK_STRING_TYPE
 syn keyword etkMacro	ETK_STRING
 syn keyword etkMacro	ETK_IS_STRING
@@ -1415,11 +1422,15 @@ syn keyword etkFunction	etk_string_insert_char
 syn keyword etkFunction	etk_string_insert_printf
 syn keyword etkFunction	etk_string_insert_vprintf
 
-"etk_table.h
+" etk_table.h
 syn keyword etkConstant	ETK_TABLE_TYPE
 syn keyword etkMacro	ETK_TABLE
 syn keyword etkMacro	ETK_IS_TABLE
-syn keyword etkType	Etk_Table_Fill_Policy
+syn keyword etkType	Etk_Table_Homogeneous
+syn keyword etkConstant	ETK_TABLE_NOT_HOMOGENEOUS
+syn keyword etkConstant	ETK_TABLE_HHOMOGENEOUS
+syn keyword etkConstant	ETK_TABLE_VHOMOGENEOUS
+syn keyword etkConstant	ETK_TABLE_HOMOGENEOUS
 syn keyword etkType	Etk_Table_Fill_Policy
 syn keyword etkConstant	ETK_TABLE_NONE
 syn keyword etkConstant	ETK_TABLE_HFILL
@@ -1431,7 +1442,7 @@ syn keyword etkConstant	ETK_TABLE_EXPAND
 syn keyword etkConstant	ETK_TABLE_EXPAND_FILL
 syn keyword etkType	Etk_Table_Cell
 syn keyword etkType	Etk_Table_Col_Row
-syn keyword etkType	_Etk_Table
+syn keyword etkType	Etk_Table
 syn keyword etkFunction	etk_table_type_get
 syn keyword etkFunction	etk_table_new
 syn keyword etkFunction	etk_table_cell_clear
@@ -1440,24 +1451,33 @@ syn keyword etkFunction	etk_table_attach
 syn keyword etkFunction	etk_table_attach_default
 syn keyword etkFunction	etk_table_homogeneous_set
 syn keyword etkFunction	etk_table_homogeneous_get
+syn keyword etkFunction	etk_table_child_position_get
 
-"etk_textblock.h
+" etk_text_view.h
+syn keyword etkConstant	ETK_TEXT_VIEW_TYPE
+syn keyword etkMacro	ETK_TEXT_VIEW
+syn keyword etkMacro	ETK_IS_TEXT_VIEW
+syn keyword etkType	Etk_Text_View
+syn keyword etkFunction	etk_text_view_type_get
+syn keyword etkFunction	etk_text_view_new
+syn keyword etkFunction	etk_text_view_textblock_get
+syn keyword etkFunction	etk_text_view_cursor_get
+syn keyword etkFunction	etk_text_view_selection_bound_get
+
+" etk_textblock.h
 syn keyword etkConstant	ETK_TEXTBLOCK_TYPE
 syn keyword etkMacro	ETK_TEXTBLOCK
 syn keyword etkMacro	ETK_IS_TEXTBLOCK
-syn keyword etkType	Etk_Textblock_Wrap
 syn keyword etkType	Etk_Textblock_Wrap
 syn keyword etkConstant	ETK_TEXTBLOCK_WRAP_NONE
 syn keyword etkConstant	ETK_TEXTBLOCK_WRAP_DEFAULT
 syn keyword etkConstant	ETK_TEXTBLOCK_WRAP_WORD
 syn keyword etkConstant	ETK_TEXTBLOCK_WRAP_CHAR
 syn keyword etkType	Etk_Textblock_Node_Type
-syn keyword etkType	Etk_Textblock_Node_Type
 syn keyword etkConstant	ETK_TEXTBLOCK_NODE_ROOT
 syn keyword etkConstant	ETK_TEXTBLOCK_NODE_PARAGRAPH
 syn keyword etkConstant	ETK_TEXTBLOCK_NODE_LINE
 syn keyword etkConstant	ETK_TEXTBLOCK_NODE_NORMAL
-syn keyword etkType	Etk_Textblock_Tag_Type
 syn keyword etkType	Etk_Textblock_Tag_Type
 syn keyword etkConstant	ETK_TEXTBLOCK_TAG_DEFAULT
 syn keyword etkConstant	ETK_TEXTBLOCK_TAG_BOLD
@@ -1467,7 +1487,6 @@ syn keyword etkConstant	ETK_TEXTBLOCK_TAG_STRIKETHROUGH
 syn keyword etkConstant	ETK_TEXTBLOCK_TAG_P
 syn keyword etkConstant	ETK_TEXTBLOCK_TAG_STYLE
 syn keyword etkConstant	ETK_TEXTBLOCK_TAG_FONT
-syn keyword etkType	Etk_Textblock_Style_Type
 syn keyword etkType	Etk_Textblock_Style_Type
 syn keyword etkConstant	ETK_TEXTBLOCK_STYLE_NONE
 syn keyword etkConstant	ETK_TEXTBLOCK_STYLE_OUTLINE
@@ -1480,11 +1499,9 @@ syn keyword etkConstant	ETK_TEXTBLOCK_STYLE_OUTLINE_SOFT_SHADOW
 syn keyword etkConstant	ETK_TEXTBLOCK_STYLE_SOFT_SHADOW
 syn keyword etkConstant	ETK_TEXTBLOCK_STYLE_FAR_SOFT_SHADOW
 syn keyword etkType	Etk_Textblock_Underline_Type
-syn keyword etkType	Etk_Textblock_Underline_Type
 syn keyword etkConstant	ETK_TEXTBLOCK_UNDERLINE_NONE
 syn keyword etkConstant	ETK_TEXTBLOCK_UNDERLINE_SINGLE
 syn keyword etkConstant	ETK_TEXTBLOCK_UNDERLINE_DOUBLE
-syn keyword etkType	Etk_Textblock_Gravity
 syn keyword etkType	Etk_Textblock_Gravity
 syn keyword etkConstant	ETK_TEXTBLOCK_GRAVITY_LEFT
 syn keyword etkConstant	ETK_TEXTBLOCK_GRAVITY_RIGHT
@@ -1520,36 +1537,58 @@ syn keyword etkFunction	etk_textblock_object_cursor_get
 syn keyword etkFunction	etk_textblock_object_selection_bound_get
 syn keyword etkFunction	etk_textblock_object_cursor_visible_set
 syn keyword etkFunction	etk_textblock_object_cursor_visible_get
+syn keyword etkFunction	etk_textblock_object_yoffset_set
+syn keyword etkFunction	etk_textblock_object_yoffset_get
+syn keyword etkFunction	etk_textblock_object_xoffset_set
+syn keyword etkFunction	etk_textblock_object_xoffset_get
+syn keyword etkFunction	etk_textblock_object_full_geometry_get
 syn keyword etkFunction	etk_textblock_unicode_length_get
 syn keyword etkFunction	etk_textblock_is_white_char
 syn keyword etkFunction	etk_textblock_char_size_get
 syn keyword etkFunction	etk_textblock_printf
 
-"etk_text_view.h
-syn keyword etkConstant	ETK_TEXT_VIEW_TYPE
-syn keyword etkMacro	ETK_TEXT_VIEW
-syn keyword etkMacro	ETK_IS_TEXT_VIEW
-syn keyword etkType	Etk_Text_View
-syn keyword etkFunction	etk_text_view_type_get
-syn keyword etkFunction	etk_text_view_new
-syn keyword etkFunction	etk_text_view_textblock_get
-syn keyword etkFunction	etk_text_view_cursor_get
-syn keyword etkFunction	etk_text_view_selection_bound_get
-
-"etk_theme.h
+" etk_theme.h
+syn keyword etkType	Etk_Color_Type
+syn keyword etkConstant	ETK_COLOR_FOREGROUND
+syn keyword etkConstant	ETK_COLOR_BACKGROUND
+syn keyword etkConstant	ETK_COLOR_IMPORTANT_FG
+syn keyword etkConstant	ETK_COLOR_IMPORTANT_BG
+syn keyword etkConstant	ETK_COLOR_WARNING_FG
+syn keyword etkConstant	ETK_COLOR_WARNING_BG
+syn keyword etkConstant	ETK_COLOR_INFO_FG
+syn keyword etkConstant	ETK_COLOR_INFO_BG
+syn keyword etkConstant	ETK_COLOR_DEFAULT1_FG
+syn keyword etkConstant	ETK_COLOR_DEFAULT1_BG
+syn keyword etkConstant	ETK_COLOR_DEFAULT2_FG
+syn keyword etkConstant	ETK_COLOR_DEFAULT2_BG
+syn keyword etkConstant	ETK_COLOR_DEFAULT3_FG
+syn keyword etkConstant	ETK_COLOR_DEFAULT3_BG
+syn keyword etkConstant	ETK_COLOR_DEFAULT4_FG
+syn keyword etkConstant	ETK_COLOR_DEFAULT4_BG
+syn keyword etkConstant	ETK_COLOR_DEFAULT5_FG
+syn keyword etkConstant	ETK_COLOR_DEFAULT5_BG
+syn keyword etkConstant	ETK_COLOR_NUM_COLORS
 syn keyword etkFunction	etk_theme_init
 syn keyword etkFunction	etk_theme_shutdown
-syn keyword etkFunction	etk_theme_widget_get
-syn keyword etkFunction	etk_theme_widget_set
+syn keyword etkFunction	etk_theme_widget_set_from_path
+syn keyword etkFunction	etk_theme_widget_set_from_name
+syn keyword etkFunction	etk_theme_widget_path_get
+syn keyword etkFunction	etk_theme_widget_name_get
 syn keyword etkFunction	etk_theme_widget_available_themes_get
-syn keyword etkFunction	etk_theme_icon_get
-syn keyword etkFunction	etk_theme_icon_set
+syn keyword etkFunction	etk_theme_widget_find
+syn keyword etkFunction	etk_theme_icon_set_from_path
+syn keyword etkFunction	etk_theme_icon_set_from_name
+syn keyword etkFunction	etk_theme_icon_path_get
+syn keyword etkFunction	etk_theme_icon_name_get
 syn keyword etkFunction	etk_theme_icon_available_themes_get
+syn keyword etkFunction	etk_theme_icon_find
+syn keyword etkFunction	etk_theme_available_themes_free
 syn keyword etkFunction	etk_theme_group_exists
 syn keyword etkFunction	etk_theme_edje_object_set
 syn keyword etkFunction	etk_theme_edje_object_set_from_parent
+syn keyword etkFunction	etk_theme_color_get
 
-"etk_toggle_button.h
+" etk_toggle_button.h
 syn keyword etkConstant	ETK_TOGGLE_BUTTON_TYPE
 syn keyword etkMacro	ETK_TOGGLE_BUTTON
 syn keyword etkMacro	ETK_IS_TOGGLE_BUTTON
@@ -1561,34 +1600,7 @@ syn keyword etkFunction	etk_toggle_button_toggle
 syn keyword etkFunction	etk_toggle_button_active_set
 syn keyword etkFunction	etk_toggle_button_active_get
 
-"etk_toolbar.h
-syn keyword etkConstant	ETK_TOOLBAR_TYPE
-syn keyword etkMacro	ETK_TOOLBAR
-syn keyword etkMacro	ETK_IS_TOOLBAR
-syn keyword etkType	Etk_Toolbar_Orientation
-syn keyword etkType	Etk_Toolbar_Orientation
-syn keyword etkConstant	ETK_TOOLBAR_HORIZ
-syn keyword etkConstant	ETK_TOOLBAR_VERT
-syn keyword etkType	Etk_Toolbar_Style
-syn keyword etkType	Etk_Toolbar_Style
-syn keyword etkConstant	ETK_TOOLBAR_DEFAULT
-syn keyword etkConstant	ETK_TOOLBAR_ICON
-syn keyword etkConstant	ETK_TOOLBAR_TEXT
-syn keyword etkConstant	ETK_TOOLBAR_BOTH_HORIZ
-syn keyword etkConstant	ETK_TOOLBAR_BOTH_VERT
-syn keyword etkType	Etk_Toolbar
-syn keyword etkFunction	etk_toolbar_type_get
-syn keyword etkFunction	etk_toolbar_new
-syn keyword etkFunction	etk_toolbar_append
-syn keyword etkFunction	etk_toolbar_prepend
-syn keyword etkFunction	etk_toolbar_orientation_set
-syn keyword etkFunction	etk_toolbar_orientation_get
-syn keyword etkFunction	etk_toolbar_style_set
-syn keyword etkFunction	etk_toolbar_style_get
-syn keyword etkFunction	etk_toolbar_stock_size_set
-syn keyword etkFunction	etk_toolbar_stock_size_get
-
-"etk_tool_button.h
+" etk_tool_button.h
 syn keyword etkConstant	ETK_TOOL_BUTTON_TYPE
 syn keyword etkMacro	ETK_TOOL_BUTTON
 syn keyword etkMacro	ETK_IS_TOOL_BUTTON
@@ -1606,7 +1618,33 @@ syn keyword etkFunction	etk_tool_toggle_button_new
 syn keyword etkFunction	etk_tool_toggle_button_new_with_label
 syn keyword etkFunction	etk_tool_toggle_button_new_from_stock
 
-"etk_tooltips.h
+" etk_toolbar.h
+syn keyword etkConstant	ETK_TOOLBAR_TYPE
+syn keyword etkMacro	ETK_TOOLBAR
+syn keyword etkMacro	ETK_IS_TOOLBAR
+syn keyword etkType	Etk_Toolbar_Orientation
+syn keyword etkConstant	ETK_TOOLBAR_HORIZ
+syn keyword etkConstant	ETK_TOOLBAR_VERT
+syn keyword etkType	Etk_Toolbar_Style
+syn keyword etkConstant	ETK_TOOLBAR_DEFAULT
+syn keyword etkConstant	ETK_TOOLBAR_ICON
+syn keyword etkConstant	ETK_TOOLBAR_TEXT
+syn keyword etkConstant	ETK_TOOLBAR_BOTH_HORIZ
+syn keyword etkConstant	ETK_TOOLBAR_BOTH_VERT
+syn keyword etkType	Etk_Toolbar
+syn keyword etkFunction	etk_toolbar_type_get
+syn keyword etkFunction	etk_toolbar_new
+syn keyword etkFunction	etk_toolbar_append
+syn keyword etkFunction	etk_toolbar_prepend
+syn keyword etkFunction	etk_toolbar_insert_at
+syn keyword etkFunction	etk_toolbar_orientation_set
+syn keyword etkFunction	etk_toolbar_orientation_get
+syn keyword etkFunction	etk_toolbar_style_set
+syn keyword etkFunction	etk_toolbar_style_get
+syn keyword etkFunction	etk_toolbar_stock_size_set
+syn keyword etkFunction	etk_toolbar_stock_size_get
+
+" etk_tooltips.h
 syn keyword etkFunction	etk_tooltips_init
 syn keyword etkFunction	etk_tooltips_shutdown
 syn keyword etkFunction	etk_tooltips_enable
@@ -1617,11 +1655,10 @@ syn keyword etkFunction	etk_tooltips_tip_visible
 syn keyword etkFunction	etk_tooltips_pop_up
 syn keyword etkFunction	etk_tooltips_pop_down
 
-"etk_toplevel.h
+" etk_toplevel.h
 syn keyword etkConstant	ETK_TOPLEVEL_TYPE
 syn keyword etkMacro	ETK_TOPLEVEL
 syn keyword etkMacro	ETK_IS_TOPLEVEL
-syn keyword etkType	Etk_Pointer_Type
 syn keyword etkType	Etk_Pointer_Type
 syn keyword etkConstant	ETK_POINTER_NONE
 syn keyword etkConstant	ETK_POINTER_DEFAULT
@@ -1653,50 +1690,15 @@ syn keyword etkFunction	etk_toplevel_pointer_push
 syn keyword etkFunction	etk_toplevel_pointer_pop
 syn keyword etkFunction	etk_toplevel_widgets_get
 
-"etk_toplevel_widget.h
-syn keyword etkConstant	ETK_TOPLEVEL_WIDGET_TYPE
-syn keyword etkMacro	ETK_TOPLEVEL_WIDGET
-syn keyword etkMacro	ETK_IS_TOPLEVEL_WIDGET
-syn keyword etkType	Etk_Pointer_Type
-syn keyword etkType	Etk_Pointer_Type
-syn keyword etkConstant	ETK_POINTER_DEFAULT
-syn keyword etkConstant	ETK_POINTER_MOVE
-syn keyword etkConstant	ETK_POINTER_H_DOUBLE_ARROW
-syn keyword etkConstant	ETK_POINTER_V_DOUBLE_ARROW
-syn keyword etkConstant	ETK_POINTER_RESIZE
-syn keyword etkConstant	ETK_POINTER_RESIZE_TL
-syn keyword etkConstant	ETK_POINTER_RESIZE_T
-syn keyword etkConstant	ETK_POINTER_RESIZE_TR
-syn keyword etkConstant	ETK_POINTER_RESIZE_R
-syn keyword etkConstant	ETK_POINTER_RESIZE_BR
-syn keyword etkConstant	ETK_POINTER_RESIZE_B
-syn keyword etkConstant	ETK_POINTER_RESIZE_BL
-syn keyword etkConstant	ETK_POINTER_RESIZE_L
-syn keyword etkConstant	ETK_POINTER_TEXT_EDIT
-syn keyword etkConstant	ETK_POINTER_DND_DROP
-syn keyword etkType	_Etk_Toplevel_Widget
-syn keyword etkFunction	etk_toplevel_widget_type_get
-syn keyword etkFunction	etk_toplevel_widget_evas_get
-syn keyword etkFunction	etk_toplevel_widget_evas_position_get
-syn keyword etkFunction	etk_toplevel_widget_screen_position_get
-syn keyword etkFunction	etk_toplevel_widget_size_get
-syn keyword etkFunction	etk_toplevel_widget_focused_widget_set
-syn keyword etkFunction	etk_toplevel_widget_focused_widget_get
-syn keyword etkFunction	etk_toplevel_widget_focused_widget_next_get
-syn keyword etkFunction	etk_toplevel_widget_focused_widget_prev_get
-syn keyword etkFunction	etk_toplevel_widget_pointer_push
-syn keyword etkFunction	etk_toplevel_widget_pointer_pop
-
-"etk_tree.h
-syn keyword etkConstant	MAX_MODELS_PER_COL
-syn keyword etkConstant	MAX_OBJECTS_PER_MODEL
+" etk_tree.h
+syn keyword etkConstant	ETK_TREE_MAX_MODELS_PER_COL
+syn keyword etkConstant	ETK_TREE_MAX_OBJECTS_PER_MODEL
 syn keyword etkConstant	ETK_TREE_TYPE
 syn keyword etkMacro	ETK_TREE
 syn keyword etkMacro	ETK_IS_TREE
 syn keyword etkConstant	ETK_TREE_COL_TYPE
 syn keyword etkMacro	ETK_TREE_COL
 syn keyword etkMacro	ETK_IS_TREE_COL
-syn keyword etkType	Etk_Tree_Mode
 syn keyword etkType	Etk_Tree_Mode
 syn keyword etkConstant	ETK_TREE_MODE_LIST
 syn keyword etkConstant	ETK_TREE_MODE_TREE
@@ -1740,6 +1742,8 @@ syn keyword etkFunction	etk_tree_col_visible_get
 syn keyword etkFunction	etk_tree_col_position_set
 syn keyword etkFunction	etk_tree_col_position_get
 syn keyword etkFunction	etk_tree_col_sort_set
+syn keyword etkFunction	etk_tree_col_sort
+syn keyword etkFunction	etk_tree_col_sort_full
 syn keyword etkFunction	etk_tree_row_prepend
 syn keyword etkFunction	etk_tree_row_append
 syn keyword etkFunction	etk_tree_row_insert
@@ -1750,6 +1754,10 @@ syn keyword etkFunction	etk_tree_row_fields_set
 syn keyword etkFunction	etk_tree_row_fields_set_valist
 syn keyword etkFunction	etk_tree_row_fields_get
 syn keyword etkFunction	etk_tree_row_fields_get_valist
+syn keyword etkFunction	etk_tree_row_model_fields_set
+syn keyword etkFunction	etk_tree_row_model_fields_set_valist
+syn keyword etkFunction	etk_tree_row_model_fields_get
+syn keyword etkFunction	etk_tree_row_model_fields_get_valist
 syn keyword etkFunction	etk_tree_row_data_set
 syn keyword etkFunction	etk_tree_row_data_set_full
 syn keyword etkFunction	etk_tree_row_data_get
@@ -1772,10 +1780,11 @@ syn keyword etkFunction	etk_tree_row_next_get
 syn keyword etkFunction	etk_tree_row_walk_prev
 syn keyword etkFunction	etk_tree_row_walk_next
 syn keyword etkFunction	etk_tree_row_tree_get
+syn keyword etkFunction	etk_tree_row_get_at_xy
 syn keyword etkFunction	etk_tree_scrolled_view_get
 syn keyword etkFunction	etk_tree_row_scroll_to
 
-"etk_tree_model.h
+" etk_tree_model.h
 syn keyword etkType	Etk_Tree_Model
 syn keyword etkFunction	etk_tree_model_text_new
 syn keyword etkFunction	etk_tree_model_int_new
@@ -1784,15 +1793,14 @@ syn keyword etkFunction	etk_tree_model_image_new
 syn keyword etkFunction	etk_tree_model_checkbox_new
 syn keyword etkFunction	etk_tree_model_progress_bar_new
 syn keyword etkFunction	etk_tree_model_free
+syn keyword etkFunction	etk_tree_model_cache_remove
 syn keyword etkFunction	etk_tree_model_image_width_set
 syn keyword etkFunction	etk_tree_model_image_width_get
 
-"etk_type.h
+" etk_type.h
 syn keyword etkMacro	ETK_CONSTRUCTOR
 syn keyword etkMacro	ETK_DESTRUCTOR
-syn keyword etkMacro	ETK_COPY_CONSTRUCTOR
 syn keyword etkType	_Etk_Type
-syn keyword etkType	Etk_Type
 syn keyword etkFunction	etk_type_shutdown
 syn keyword etkFunction	etk_type_new
 syn keyword etkFunction	etk_type_delete
@@ -1801,6 +1809,7 @@ syn keyword etkFunction	etk_type_destructors_call
 syn keyword etkFunction	etk_type_inherits_from
 syn keyword etkFunction	etk_type_parent_type_get
 syn keyword etkFunction	etk_type_name_get
+syn keyword etkFunction	etk_type_get_from_name
 syn keyword etkFunction	etk_type_signal_add
 syn keyword etkFunction	etk_type_signal_remove
 syn keyword etkFunction	etk_type_signal_get
@@ -1808,30 +1817,35 @@ syn keyword etkFunction	etk_type_property_add
 syn keyword etkFunction	etk_type_property_find
 syn keyword etkFunction	etk_type_property_list
 
-"etk_types.h
+" etk_types.h
 syn keyword etkBoolean	ETK_FALSE
 syn keyword etkBoolean	ETK_TRUE
 syn keyword etkType	Etk_Bool
 syn keyword etkType	Etk_String
-syn keyword etkFunction	Etk_Accumulator
-syn keyword etkFunction	Etk_Constructor
-syn keyword etkFunction	Etk_Callback
-syn keyword etkFunction	Etk_Callback_Swapped
-syn keyword etkFunction	Etk_Marshaller
+syn keyword etkType	Etk_Type
+syn keyword etkType	Etk_Accumulator
+syn keyword etkType	Etk_Constructor
+syn keyword etkType	Etk_Destructor
+syn keyword etkType	Etk_Callback
+syn keyword etkType	Etk_Callback_Swapped
+syn keyword etkType	Etk_Marshaller
+syn keyword etkType	Etk_Drag
 syn keyword etkType	Etk_Event_Selection_Request
+syn keyword etkType	Etk_Filechooser_Widget
 syn keyword etkType	Etk_Selection_Data
+syn keyword etkType	Etk_Selection_Data_Files
 syn keyword etkType	Etk_Selection_Data_Targets
-syn keyword etkType	Etk_Slider
-syn keyword etkType	Etk_HSlider
-syn keyword etkType	Etk_VSlider
-syn keyword etkType	Etk_Table
+syn keyword etkType	Etk_Selection_Data_Text
+syn keyword etkType	Etk_Tool_Button
 syn keyword etkType	Etk_Tool_Toggle_Button
+syn keyword etkType	Etk_Viewport
+syn keyword etkType	Etk_Window
 syn keyword etkType	Etk_Position
 syn keyword etkType	Etk_Size
 syn keyword etkType	Etk_Geometry
 syn keyword etkType	Etk_Color
 
-"etk_utils.h
+" etk_utils.h
 syn keyword etkMacro	_
 syn keyword etkMacro	ETK_MAX
 syn keyword etkMacro	ETK_MIN
@@ -1846,7 +1860,7 @@ syn keyword etkFunction	etk_accumulator_stopping_bool_and
 syn keyword etkFunction	etk_callback_set_null
 syn keyword etkFunction	etk_current_time_get
 
-"etk_viewport.h
+" etk_viewport.h
 syn keyword etkConstant	ETK_VIEWPORT_TYPE
 syn keyword etkMacro	ETK_VIEWPORT
 syn keyword etkMacro	ETK_IS_VIEWPORT
@@ -1854,11 +1868,10 @@ syn keyword etkType	_Etk_Viewport
 syn keyword etkFunction	etk_viewport_type_get
 syn keyword etkFunction	etk_viewport_new
 
-"etk_widget.h
+" etk_widget.h
 syn keyword etkConstant	ETK_WIDGET_TYPE
 syn keyword etkMacro	ETK_WIDGET
 syn keyword etkMacro	ETK_IS_WIDGET
-syn keyword etkType	Etk_Widget_Swallow_Error
 syn keyword etkType	Etk_Widget_Swallow_Error
 syn keyword etkConstant	ETK_SWALLOW_ERROR_NONE
 syn keyword etkConstant	ETK_SWALLOW_ERROR_INCOMPATIBLE_PARENT
@@ -1867,15 +1880,34 @@ syn keyword etkConstant	ETK_SWALLOW_ERROR_NO_PART
 syn keyword etkType	Etk_Widget
 syn keyword etkFunction	etk_widget_type_get
 syn keyword etkFunction	etk_widget_new
-syn keyword etkFunction	etk_widget_geometry_get
-syn keyword etkFunction	etk_widget_inner_geometry_get
-syn keyword etkFunction	etk_widget_padding_set
-syn keyword etkFunction	etk_widget_padding_get
+syn keyword etkFunction	etk_widget_show
+syn keyword etkFunction	etk_widget_show_all
+syn keyword etkFunction	etk_widget_hide
+syn keyword etkFunction	etk_widget_hide_all
+syn keyword etkFunction	etk_widget_is_visible
+syn keyword etkFunction	etk_widget_internal_set
+syn keyword etkFunction	etk_widget_internal_get
+syn keyword etkFunction	etk_widget_focus
+syn keyword etkFunction	etk_widget_unfocus
+syn keyword etkFunction	etk_widget_is_focused
+syn keyword etkFunction	etk_widget_focusable_set
+syn keyword etkFunction	etk_widget_focusable_get
+syn keyword etkFunction	etk_widget_disabled_set
+syn keyword etkFunction	etk_widget_disabled_get
+syn keyword etkFunction	etk_widget_enter
+syn keyword etkFunction	etk_widget_leave
+syn keyword etkFunction	etk_widget_raise
+syn keyword etkFunction	etk_widget_lower
+syn keyword etkFunction	etk_widget_repeat_mouse_events_set
+syn keyword etkFunction	etk_widget_repeat_mouse_events_get
+syn keyword etkFunction	etk_widget_pass_mouse_events_set
+syn keyword etkFunction	etk_widget_pass_mouse_events_get
+syn keyword etkFunction	etk_widget_has_event_object_set
+syn keyword etkFunction	etk_widget_has_event_object_get
+syn keyword etkFunction	etk_widget_parent_set
+syn keyword etkFunction	etk_widget_parent_get
 syn keyword etkFunction	etk_widget_toplevel_parent_get
 syn keyword etkFunction	etk_widget_toplevel_evas_get
-syn keyword etkFunction	etk_widget_parent_set
-syn keyword etkFunction	etk_widget_parent_set_full
-syn keyword etkFunction	etk_widget_parent_get
 syn keyword etkFunction	etk_widget_theme_set
 syn keyword etkFunction	etk_widget_theme_file_set
 syn keyword etkFunction	etk_widget_theme_file_get
@@ -1883,49 +1915,35 @@ syn keyword etkFunction	etk_widget_theme_group_set
 syn keyword etkFunction	etk_widget_theme_group_get
 syn keyword etkFunction	etk_widget_theme_parent_set
 syn keyword etkFunction	etk_widget_theme_parent_get
-syn keyword etkFunction	etk_widget_has_event_object_set
-syn keyword etkFunction	etk_widget_has_event_object_get
-syn keyword etkFunction	etk_widget_repeat_mouse_events_set
-syn keyword etkFunction	etk_widget_repeat_mouse_events_get
-syn keyword etkFunction	etk_widget_pass_mouse_events_set
-syn keyword etkFunction	etk_widget_pass_mouse_events_get
-syn keyword etkFunction	etk_widget_internal_set
-syn keyword etkFunction	etk_widget_internal_get
-syn keyword etkFunction	etk_widget_show
-syn keyword etkFunction	etk_widget_show_all
-syn keyword etkFunction	etk_widget_hide
-syn keyword etkFunction	etk_widget_hide_all
-syn keyword etkFunction	etk_widget_is_visible
-syn keyword etkFunction	etk_widget_raise
-syn keyword etkFunction	etk_widget_lower
+syn keyword etkFunction	etk_widget_color_set
+syn keyword etkFunction	etk_widget_color_get
+syn keyword etkFunction	etk_widget_propagate_color_set
+syn keyword etkFunction	etk_widget_propagate_color_get
+syn keyword etkFunction	etk_widget_padding_set
+syn keyword etkFunction	etk_widget_padding_get
+syn keyword etkFunction	etk_widget_geometry_get
+syn keyword etkFunction	etk_widget_inner_geometry_get
 syn keyword etkFunction	etk_widget_size_recalc_queue
 syn keyword etkFunction	etk_widget_redraw_queue
 syn keyword etkFunction	etk_widget_size_request_set
 syn keyword etkFunction	etk_widget_size_request
 syn keyword etkFunction	etk_widget_size_request_full
 syn keyword etkFunction	etk_widget_size_allocate
-syn keyword etkFunction	etk_widget_enter
-syn keyword etkFunction	etk_widget_leave
-syn keyword etkFunction	etk_widget_focusable_set
-syn keyword etkFunction	etk_widget_focusable_get
-syn keyword etkFunction	etk_widget_focus
-syn keyword etkFunction	etk_widget_unfocus
-syn keyword etkFunction	etk_widget_is_focused
 syn keyword etkFunction	etk_widget_theme_signal_emit
 syn keyword etkFunction	etk_widget_theme_part_text_set
 syn keyword etkFunction	etk_widget_theme_data_get
-syn keyword etkFunction	etk_widget_swallow_widget
-syn keyword etkFunction	etk_widget_unswallow_widget
-syn keyword etkFunction	etk_widget_is_swallowed
-syn keyword etkFunction	etk_widget_swallow_object
-syn keyword etkFunction	etk_widget_unswallow_object
-syn keyword etkFunction	etk_widget_swallow_error_get
 syn keyword etkFunction	etk_widget_member_object_add
 syn keyword etkFunction	etk_widget_member_object_del
 syn keyword etkFunction	etk_widget_member_object_raise
 syn keyword etkFunction	etk_widget_member_object_lower
 syn keyword etkFunction	etk_widget_member_object_stack_above
 syn keyword etkFunction	etk_widget_member_object_stack_below
+syn keyword etkFunction	etk_widget_swallow_widget
+syn keyword etkFunction	etk_widget_unswallow_widget
+syn keyword etkFunction	etk_widget_is_swallowed
+syn keyword etkFunction	etk_widget_swallow_object
+syn keyword etkFunction	etk_widget_unswallow_object
+syn keyword etkFunction	etk_widget_swallow_error_get
 syn keyword etkFunction	etk_widget_clip_set
 syn keyword etkFunction	etk_widget_clip_unset
 syn keyword etkFunction	etk_widget_clip_get
@@ -1942,24 +1960,16 @@ syn keyword etkFunction	etk_widget_dnd_types_set
 syn keyword etkFunction	etk_widget_dnd_types_get
 syn keyword etkFunction	etk_widget_dnd_internal_get
 syn keyword etkFunction	etk_widget_dnd_internal_set
-syn keyword etkFunction	etk_widget_drag_drop
-syn keyword etkFunction	etk_widget_drag_motion
-syn keyword etkFunction	etk_widget_drag_enter
-syn keyword etkFunction	etk_widget_drag_leave
-syn keyword etkFunction	etk_widget_drag_begin
-syn keyword etkFunction	etk_widget_drag_end
 
-"etk_window.h
+" etk_window.h
 syn keyword etkConstant	ETK_WINDOW_TYPE
 syn keyword etkMacro	ETK_WINDOW
 syn keyword etkMacro	ETK_IS_WINDOW
-syn keyword etkType	Etk_Window_Stacking
 syn keyword etkType	Etk_Window_Stacking
 syn keyword etkConstant	ETK_WINDOW_NORMAL
 syn keyword etkConstant	ETK_WINDOW_ABOVE
 syn keyword etkConstant	ETK_WINDOW_BELOW
 syn keyword etkType	_Etk_Window
-syn keyword etkType	Etk_Window
 syn keyword etkFunction	etk_window_type_get
 syn keyword etkFunction	etk_window_new
 syn keyword etkFunction	etk_window_delete_request
@@ -1990,6 +2000,8 @@ syn keyword etkFunction	etk_window_decorated_set
 syn keyword etkFunction	etk_window_decorated_get
 syn keyword etkFunction	etk_window_shaped_set
 syn keyword etkFunction	etk_window_shaped_get
+syn keyword etkFunction	etk_window_has_alpha_set
+syn keyword etkFunction	etk_window_has_alpha_get
 syn keyword etkFunction	etk_window_skip_taskbar_hint_set
 syn keyword etkFunction	etk_window_skip_taskbar_hint_get
 syn keyword etkFunction	etk_window_skip_pager_hint_set
@@ -2003,11 +2015,11 @@ if version >= 508 || !exists("did_etk_syntax_inits")
 	else
 		command -nargs=+ HiLink hi def link <args>
 	endif
-	HiLink etkType                Type
-	HiLink etkFunction            Function
-	HiLink etkMacro               Macro
-	HiLink etkConstant            Constant
-	HiLink etkBoolean             Boolean
+	HiLink etkType      Type
+	HiLink etkFunction  Function
+	HiLink etkMacro     Macro
+	HiLink etkConstant  Constant
+	HiLink etkBoolean   Boolean
+	HiLink etkSpecial   Special
 	delcommand HiLink
 endif
-
